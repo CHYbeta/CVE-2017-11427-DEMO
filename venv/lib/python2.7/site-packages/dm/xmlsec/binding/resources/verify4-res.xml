@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+XML Security Library example: A simple SAML response template (verify4 example). 
+
+Sign it using the following command (replace __ with double dashes):
+
+ ../apps/xmlsec sign __privkey rsakey.pem,rsacert.pem __output verify4-res.xml verify4-tmpl.xml
+-->
+<Response xmlns="urn:oasis:names:tc:SAML:1.0:protocol" xmlns:samlp="urn:oasis:names:tc:SAML:1.0:protocol" IssueInstant="2002-04-18T16:56:54Z" MajorVersion="1" MinorVersion="0" Recipient="https://shire.target.com" ResponseID="7ddc31-ed4a03d703-FB24AD27D96135B68C99FB9AACFE2FFC">
+  <dsig:Signature xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+    <dsig:SignedInfo>
+      <dsig:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+      <dsig:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+      <dsig:Reference URI="">
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+        <dsig:DigestValue>t1nvDq1bZXEhBIXc/DHcqIrjRyI=</dsig:DigestValue>
+      </dsig:Reference>
+    </dsig:SignedInfo>
+    <dsig:SignatureValue>u6h5vf+gKlpTXLNzMEUhkWIJwM8z2A5LzabRPeUA3xSFGjOa34JaR4G31I1IWlez
+eT3P9YQVwrotg3P0gOZkWGnhJ+gakEg50CUfEqE05dwqBhY7YzxyVJZGygQrUcL4
+YgUGRQG5CsuHzu/rQHAjqWUTurzx6boTfYGAsjsj3NL0qVcPSFlSG1QrhAA+Ek55
+eZIuSbD7UnsCPD6lQSdzB1AFk6GnXxPDp16Ogf0tYPyx824havzeC12vMg2gpRyN
+yZdv55H9gfaDZZKzM7LglkqFGEjoUnzdmxaLm1BcuHH4M1gKG1REbf9U0T+5Fb3w
+rL2shgsSwf5InfPkAL33HA==</dsig:SignatureValue>
+    <dsig:KeyInfo>
+      <dsig:X509Data>
+<dsig:X509Certificate>MIID3zCCAscCCQCsJYoNNCLPzjANBgkqhkiG9w0BAQUFADCBszELMAkGA1UEBhMC
+REUxETAPBgNVBAgTCFNhYXJsYW5kMRIwEAYDVQQHEwlFcHBlbGJvcm4xGjAYBgNV
+BAoTEWRtLnhtbHNlYy5iaW5kaW5nMSEwHwYDVQQLExhFeGFtcGxlIFJvb3QgQ2Vy
+dGlmaWNhdGUxGjAYBgNVBAMTEWRtLnhtbHNlYy5iaW5kaW5nMSIwIAYJKoZIhvcN
+AQkBFhNkaWV0ZXJAaGFuZHNoYWtlLmRlMB4XDTEyMDYxNTE0Mzg1NFoXDTMxMDgx
+NTE0Mzg1NFowga4xCzAJBgNVBAYTAkRFMREwDwYDVQQIEwhTYWFybGFuZDESMBAG
+A1UEBxMJRXBwZWxib3JuMRowGAYDVQQKExFkbS54bWxzZWMuYmluZGluZzEcMBoG
+A1UECxMTRXhhbXBsZSBjZXJ0aWZpY2F0ZTEaMBgGA1UEAxMRZG0ueG1sc2VjLmJp
+bmRpbmcxIjAgBgkqhkiG9w0BCQEWE2RpZXRlckBoYW5kc2hha2UuZGUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDG2XhPbbMvKvwFRZ68Rk/gAGfz80Jw
+sO3Cn/c6Ru99L1cimjFz7V8izjpU1Kz+XbFr89mrNVew4SRAFrrtJrKrEfD2IPMc
++FEOVxtiUaRYcO+jTrMsfI3jpSb3Bnlkd/H90W6713whk4J7DcKJiaVHLZtUm5FP
+WABKsiyevzrJvxHVyC4aE0lYzrllVxpKf5xGinwAuY67O7ODAMdFQfvtIkJLp938
+mwXONgxmC9LAc6lBXK4ER4XhF9zWGVdgHFK3i7SdqQbRSCg8XRLKDQquOmIZoSF+
+aq1sVz2NfZIEiS2rfDgh6PquTR/WXgS3txpcQmq1fG9a72HM4V1fEDUtAgMBAAEw
+DQYJKoZIhvcNAQEFBQADggEBACYexrHl0hECRAV66UDmSeIw3V1gBR9tqYE9Q3LP
+N0jBZA+hQi1oa5PLqwG3LbIHYRwXLThvBMsUNfsAFLvfMJTbRGan8RqUapEdb3nm
+DNZKHG5Sf2bfzIyIb8GnGDLC47sjVK9+ujQuH/xUjiOsf2c5GNJHyibxgq0G1vQq
+tf00D3SV9AkRsSeBjV8irNHk1J/SALFdSnycT4rgUbuvEb0b9FPaHJBxkjFbrSnV
+AVc9F/lrx5uDFhd+FaRTbQcaQzG0UyyHlEa/kUp7Bclz0KD21Rb7GOglqUGK+UK2
+5AvjVnxazsV0DJzTyRVdJ9QiNqOiPzGvMd1cIxPI5NJQEw0=</dsig:X509Certificate>
+</dsig:X509Data>
+    </dsig:KeyInfo>
+  </dsig:Signature>
+  <Status>
+    <StatusCode Value="samlp:Success"/>
+  </Status>
+  <Assertion xmlns="urn:oasis:names:tc:SAML:1.0:assertion" AssertionID="7ddc31-ed4a03d735-FB24AD27D96135B68C99FB9AACFE2FFC" IssueInstant="2002-04-18T16:56:54Z" Issuer="hs.osu.edu" MajorVersion="1" MinorVersion="0">
+    <Conditions NotBefore="2002-04-18T16:56:54Z" NotOnOrAfter="2002-04-18T17:01:54Z">
+      <AudienceRestrictionCondition>
+        <Audience>http://middleware.internet2.edu/shibboleth/clubs/clubshib/1.0/</Audience>
+      </AudienceRestrictionCondition>
+    </Conditions>
+    <AuthenticationStatement AuthenticationInstant="2002-04-18T16:56:53Z" AuthenticationMethod="urn:mace:shibboleth:authmethod">
+      <Subject>
+        <NameIdentifier Format="urn:mace:shibboleth:1.0:handle" NameQualifier="osu.edu">foo</NameIdentifier>
+        <SubjectConfirmation>
+          <ConfirmationMethod>urn:oasis:names:tc:SAML:1.0:cm:Bearer</ConfirmationMethod>
+        </SubjectConfirmation>
+      </Subject>
+      <SubjectLocality IPAddress="127.0.0.1"/>
+      <AuthorityBinding AuthorityKind="samlp:AttributeQuery" Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aa.osu.edu/"/>
+    </AuthenticationStatement>
+  </Assertion>
+</Response>

@@ -1,0 +1,54 @@
+This file contains test cases to reproduce reported
+errors and show that the applied fixes indeed resolve the problem.
+
+
+Initialization
+==============
+
+This is not a test case but common initialization for the following
+tests.
+
+>>> import dm.xmlsec.binding as xmlsec
+>>> xmlsec.initialize()
+>>> from os.path import dirname, basename
+>>> from lxml.etree import tostring, parse
+>>> BASEDIR = dirname(xmlsec.__file__) + "/resources/"
+
+
+
+Decryption of XML nodes other than the root
+===========================================
+
+This problem has been reported by Dariusz Suchojad on 2012-08-31.
+
+First encrypt a nested node.
+
+>>> tmpl = parse(BASEDIR + "encrypt-element-tmpl.xml").getroot()
+>>> doc = parse(BASEDIR + "encrypt2-doc.xml")
+>>> encCtx = xmlsec.EncCtx()
+>>> keyfile = BASEDIR + "deskey.bin"
+>>> encKey = xmlsec.Key.readBinaryFile(xmlsec.KeyDataDes, keyfile)
+>>> encKey.name = basename(keyfile)
+>>> encCtx.encKey = encKey
+>>> ed = encCtx.encryptXml(tmpl, doc.find("{urn:envelope}Data"))
+>>> edoc = ed.getroottree()
+
+Now decrypt.
+
+>>> encCtx = xmlsec.EncCtx()
+>>> encCtx.encKey = encKey
+>>> edoc = ed.getroottree()
+>>> encCtx = xmlsec.EncCtx()
+>>> encCtx.encKey = encKey
+>>> dd = encCtx.decrypt(edoc.find(xmlsec.enc("EncryptedData")))
+>>> print dd.text.strip()
+Hello, World!
+>>> ddoc = dd.getroottree()
+>>> print tostring(ddoc)
+<!-- 
+XML Security Library example: Original XML doc file before encryption (encrypt2 example). 
+--><Envelope xmlns="urn:envelope">
+  <Data>
+	Hello, World!
+  </Data>
+</Envelope>

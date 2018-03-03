@@ -1,0 +1,34 @@
+<!-- 
+XML Security Library example: Original XML doc file for sign3 example. 
+--><Envelope xmlns="urn:envelope">
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>HjY8ilZAIEM2tBbPn5mYO1ieIX4=</DigestValue></Reference></SignedInfo><SignatureValue>GPl4vqQfQ0+b0a4mpwYXD63WA0XZEbjYvPUrCC5ySocjbnS7eofnLxpgW7AdTnaX
+3ws3zj9i184Txm26/pLu/AMQ6ezeMidod6pm5anDlRQq0WCBzxyDJo0SGo7StuFS
+kN6vRPLWr6fsnzlWdvYXCf7AXK17ANSskSNzoiQCPFYi2yISCAZlOhle9GSgMe4z
+iUjrvdRU9b5zan+yBfloWw3tsRBDqcIm0xDWcUHavcn9wxuX+7QTl+B+Qe6OZJJO
+4dM1ESmjhamEFtqSiij20HSUp32AUXiKIeKnFdT4hYuacwEdF5ZXVUQ79pLBxfIR
+wlyXAHbqFba/h/Qxe8FMIQ==</SignatureValue><KeyInfo><KeyName/><X509Data>
+<X509Certificate>MIID3zCCAscCCQCsJYoNNCLPzjANBgkqhkiG9w0BAQUFADCBszELMAkGA1UEBhMC
+REUxETAPBgNVBAgTCFNhYXJsYW5kMRIwEAYDVQQHEwlFcHBlbGJvcm4xGjAYBgNV
+BAoTEWRtLnhtbHNlYy5iaW5kaW5nMSEwHwYDVQQLExhFeGFtcGxlIFJvb3QgQ2Vy
+dGlmaWNhdGUxGjAYBgNVBAMTEWRtLnhtbHNlYy5iaW5kaW5nMSIwIAYJKoZIhvcN
+AQkBFhNkaWV0ZXJAaGFuZHNoYWtlLmRlMB4XDTEyMDYxNTE0Mzg1NFoXDTMxMDgx
+NTE0Mzg1NFowga4xCzAJBgNVBAYTAkRFMREwDwYDVQQIEwhTYWFybGFuZDESMBAG
+A1UEBxMJRXBwZWxib3JuMRowGAYDVQQKExFkbS54bWxzZWMuYmluZGluZzEcMBoG
+A1UECxMTRXhhbXBsZSBjZXJ0aWZpY2F0ZTEaMBgGA1UEAxMRZG0ueG1sc2VjLmJp
+bmRpbmcxIjAgBgkqhkiG9w0BCQEWE2RpZXRlckBoYW5kc2hha2UuZGUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDG2XhPbbMvKvwFRZ68Rk/gAGfz80Jw
+sO3Cn/c6Ru99L1cimjFz7V8izjpU1Kz+XbFr89mrNVew4SRAFrrtJrKrEfD2IPMc
++FEOVxtiUaRYcO+jTrMsfI3jpSb3Bnlkd/H90W6713whk4J7DcKJiaVHLZtUm5FP
+WABKsiyevzrJvxHVyC4aE0lYzrllVxpKf5xGinwAuY67O7ODAMdFQfvtIkJLp938
+mwXONgxmC9LAc6lBXK4ER4XhF9zWGVdgHFK3i7SdqQbRSCg8XRLKDQquOmIZoSF+
+aq1sVz2NfZIEiS2rfDgh6PquTR/WXgS3txpcQmq1fG9a72HM4V1fEDUtAgMBAAEw
+DQYJKoZIhvcNAQEFBQADggEBACYexrHl0hECRAV66UDmSeIw3V1gBR9tqYE9Q3LP
+N0jBZA+hQi1oa5PLqwG3LbIHYRwXLThvBMsUNfsAFLvfMJTbRGan8RqUapEdb3nm
+DNZKHG5Sf2bfzIyIb8GnGDLC47sjVK9+ujQuH/xUjiOsf2c5GNJHyibxgq0G1vQq
+tf00D3SV9AkRsSeBjV8irNHk1J/SALFdSnycT4rgUbuvEb0b9FPaHJBxkjFbrSnV
+AVc9F/lrx5uDFhd+FaRTbQcaQzG0UyyHlEa/kUp7Bclz0KD21Rb7GOglqUGK+UK2
+5AvjVnxazsV0DJzTyRVdJ9QiNqOiPzGvMd1cIxPI5NJQEw0=</X509Certificate>
+</X509Data></KeyInfo></Signature><Data>
+	Hello, World!
+  </Data>
+</Envelope>
